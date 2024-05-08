@@ -1,4 +1,4 @@
-# Ex.08 Design of a Standard Calculator
+![image](https://github.com/KSIHORE/Calc/assets/151484879/0d02c3ef-1dd7-4b83-8a25-683b0e836855)# Ex.08 Design of a Standard Calculator
 ## Date:
 
 ## AIM:
@@ -25,8 +25,155 @@ Validate the HTML and CSS code.
 Publish the website in the given URL.
 
 ## PROGRAM :
+```
+NAME:KISHORE.B
+REF.NO:212222110020
+```
+```
 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculator</title>
+        
+        <script>
+        function calculate(args)
+        {
+            res = document.getElementById("result");
+            expression = res.innerText;
+            cmd = args.srcElement.innerText;
+            if(cmd == "=")
+            {
+                expression = "" + eval(expression)
+            }
+            else if(cmd == "C")
+            {
+                expression=""
+            }
+            else if(cmd == "DEL")
+            {
+                expression = expression.slice(0, -1);
+
+            }
+            else if(cmd == "√")
+            {
+                expression = "" + Math.sqrt(eval(expression));
+            }
+            else if(cmd == "%")
+            {
+                expression = expression % 1;
+            }
+            else if(cmd == "log")
+             {
+        expression = Math.log10(expression);
+           }
+       
+            else{
+                expression = expression + cmd;
+            }
+            res.innerText = expression;
+            
+
+        }
+         
+        </script>
+
+        <style>
+          
+            .calculator-container {
+                width: 400px;
+                background-color:rgb(55, 68, 52);
+                margin: 0 auto; 
+                margin-top: 230px;
+                text-align: center;
+                
+            }
+
+           
+            button {
+                width: 50px;
+                height: 50px;
+                margin: 10px; 
+                font-size: 20px; 
+                
+                background-color:brown; 
+                color: white; 
+                border: none;
+            }
+
+          
+            #result {
+                
+       background-color:cyan;
+    text-align: right;
+    padding-right: 50px;
+    font-size: 20px;
+    margin-bottom: 20px; 
+    border: solid black 0.5px;
+    color: black;
+    width: 348px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+            }
+            h1 {
+                padding-top: 10px;
+                color:white;
+                font-size: 50px;
+            }
+            .redd {
+                background-color:rgb(11, 194, 218);
+                color: rgb(195, 14, 14)
+            }
+            .bluee {
+                
+                background-color:rgb(18, 46, 203);
+                color: rgb(218, 188, 188);
+                font-size: 17px;
+            }
+            body {
+                background-color:rgb(255, 47, 47);
+            }
+        </style>
+
+    </head>
+<body>
+    <div class="calculator-container">
+        <h1>KISHORE.B</h1>
+        <h2>REGISTER NO=212222110020</h2>
+        <div id="result">0</div>
+        <button onclick="calculate(event);">7</button>
+        <button onclick="calculate(event);">8</button>
+        <button onclick="calculate(event);">9</button>
+        <button class="bluee"  onclick="calculate(event);">/</button>
+        <button class="bluee"  onclick="calculate(event);"> DEL </button><br>
+        <button onclick="calculate(event);">4</button>
+        <button onclick="calculate(event);">5</button>
+        <button onclick="calculate(event);">6</button>
+        <button class="bluee"  onclick="calculate(event);">*</button>
+        <button class="bluee"  onclick="calculate(event);">&radic; </button><br>
+        <button onclick="calculate(event);">1</button>
+        <button onclick="calculate(event);">2</button>
+        <button onclick="calculate(event);">3</button>
+        <button class="bluee"  onclick="calculate(event);">-</button>
+        <button class="bluee"  onclick="calculate(event);">log</button><br>
+        <button onclick="calculate(event);">0</button>
+        <button onclick="calculate(event);">.</button>
+        <button class="redd" onclick="calculate(event);">C</button>
+        <button class="bluee"  onclick="calculate(event);">+</button>
+        <button class="bluee" onclick="calculate(event);">=</button><br>
+    </div>
+    </body>
+</html>
+```
 ## OUTPUT:
+![Screenshot 2024-05-08 192509](https://github.com/KSIHORE/Calc/assets/151484879/435ff7db-f714-4bb7-a4ca-6dddb19ee026)
+![Screenshot 2024-05-08 192522](https://github.com/KSIHORE/Calc/assets/151484879/c6fef809-5a76-472e-a129-b35c91c71181)
+
+
+
 
 ## RESULT:
 The program for designing a standard calculator using HTML and CSS is executed successfully.
