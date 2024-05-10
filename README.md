@@ -1,4 +1,3 @@
-![image](https://github.com/KSIHORE/Calc/assets/151484879/0d02c3ef-1dd7-4b83-8a25-683b0e836855)# Ex.08 Design of a Standard Calculator
 ## Date:
 
 ## AIM:
